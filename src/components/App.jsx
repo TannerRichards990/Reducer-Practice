@@ -25,7 +25,6 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<ShoppingListPage />} />
-          <Route path="/timeline" element={<TimelinePage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
