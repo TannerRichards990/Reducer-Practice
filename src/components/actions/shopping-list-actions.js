@@ -1,30 +1,24 @@
-const shoppingListLoadSuccess = 'SHOPPING_LIST_LOAD_SUCCESS';
-const shoppingListLoading = 'SHOPPING_LIST_LOADING';
-const shoppingListError = 'SHOPPING_LIST_ERROR';
-const shoppingListCandidateBodyChanged = 'SHOPPING_LIST_CANDIDATE_BODY_CHANGED';
-const shoppingListSeenChanged = 'SHOPPING_LIST_SEEN_CHANGED';
-
-export const loadShoppingListSuccess = (shoppingList) => ({
-  type: shoppingListLoadSuccess,
+export const shoppingListLoadSuccess = (shoppingList) => ({
+  type: 'shopping-list-load-success',
   payload: { shoppingList },
 });
 
 export const loadShoppingListStart = () => ({
-  type: shoppingListLoading,
+  type: 'shopping-list-loading',
 });
 
 export const loadShoppingListError = (error) => ({
-  type: shoppingListError,
+  type: 'shopping-list-error',
   payload: { error },
 });
 
 export const changeShoppingListCandidateBody = (body) => ({
-  type: shoppingListCandidateBodyChanged,
+  type: 'shopping-list-candidate-body-changed',
   payload: { body },
 });
 
 export const changeShoppingListSeen = (postId, seen) => ({
-  type: shoppingListSeenChanged,
+  type: 'shopping-list-seen-changed',
   payload: { postId, seen },
 });
 
