@@ -34,7 +34,7 @@ export default function ShoppingListPage() {
         }}
         onSubmit={async (body) => {
           await createShoppingListItem(body);
-          getPostsEffect(dispatch);
+          getShoppingListItemsEffect(dispatch);
           dispatch(shoppingListCandidateBodyChanged(''));
         }}
       />

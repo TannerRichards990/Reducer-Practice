@@ -6,16 +6,18 @@ export default function ShoppingPostList({
 }) {
   return (
     <ol>
-      {shoppingList.map((post) => (
-        <li key={post.id}>
-          <ShoppingPost
-            post={post}
-            handleSeenChanged={(seen) => {
-              handleSeenChangedByPostId(post.id, seen);
-            }}
-          />
-        </li>
-      ))}
+      {shoppingList.map((post) => {
+        return (
+          <li key={post.id}>
+            <ShoppingPost
+              post={post}
+              handleSeenChanged={(seen) => {
+                handleSeenChangedByPostId(post.id, seen);
+              }}
+            />
+          </li>
+        );
+      })}
     </ol>
   );
 }
