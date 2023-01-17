@@ -3,21 +3,21 @@ export const shoppingListLoadSuccess = (shoppingList) => ({
   payload: { shoppingList },
 });
 
-export const loadShoppingListStart = () => ({
+export const shoppingListLoadStart = () => ({
   type: 'shopping-list-loading',
 });
 
-export const loadShoppingListError = (error) => ({
+export const shoppingListError = (error) => ({
   type: 'shopping-list-error',
   payload: { error },
 });
 
-export const changeShoppingListCandidateBody = (body) => ({
+export const shoppingListCandidateBodyChanged = (body) => ({
   type: 'shopping-list-candidate-body-changed',
   payload: { body },
 });
 
-export const changeShoppingListSeen = (postId, seen) => ({
+export const shoppingListSeenChanged = (postId, seen) => ({
   type: 'shopping-list-seen-changed',
   payload: { postId, seen },
 });

@@ -7,8 +7,10 @@ import {
 import { useEffect } from 'react';
 import Layout from './Page/Layout.jsx';
 import './Design.css';
-import ShoppingListPage from './Page/ShoppingListPage.jsx';
+
 import { getShoppingListItems } from '../services/shopping-list-items.js';
+import ShoppingListPage from './Page/ShoppingListPage.jsx';
+import { PostListProvider } from './ShoppingListProvider.jsx';
 
 
 export default function App() {
@@ -22,12 +24,14 @@ export default function App() {
   }, []);
   return (
     <Router>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<ShoppingListPage />} />
-        </Route>
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <PostListProvider>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<ShoppingListPage />} />
+          </Route>
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </PostListProvider>
     </Router>
   );
 }

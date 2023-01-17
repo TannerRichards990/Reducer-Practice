@@ -9,15 +9,15 @@ import {
 } from '../actions/shopping-list-actions';
 import ShoppingListForm from './ShoppingListForm';
 import { 
-  getPostsEffect,
+  getShoppingListItemsEffect,
   updateShoppingListItemEffect, 
-} from '../effects/shopping-list-effects';
+} from '../../effects/shopping-list-effects';
 
 
 export default function ShoppingListPage() {
   const { state, dispatch } = useContext(Context);
   useEffect(() => {
-    getPostsEffect(dispatch);
+    getShoppingListItemsEffect(dispatch);
   }, []);
 
   const handleSeenChanged = (postId, seen) => {
