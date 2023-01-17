@@ -31,6 +31,22 @@ export const reducer = (state, action) => {
         ...state,
         shoppingCandidateBody: action.body,
       };
+    case 'shopping-list-seen-changed': {
+      const { postId, seen } = action;
+      const shoppingList = state.shoppingList.map((item) => {
+        if (item.id === postId) {
+          return {
+            ...item,
+            seen,
+          };
+        }
+        return item;
+      });
+      return {
+        ...state,
+        shoppingList,
+      };
+    }
     default:
       console.error(`Action type not allowed ${action.type}`, action);
       return state;
