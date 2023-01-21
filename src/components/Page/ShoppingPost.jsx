@@ -4,7 +4,7 @@ export default function ShoppingPost({ post, handleSeenChanged }) {
       <input
         type="checkbox"
         checked={post.seen}
-        onChange={() => handleSeenChanged(post.id, !post.seen)}
+        onChange={() => handleSeenChanged(!post.seen)}
       />
       {post.id}
       {post.item}

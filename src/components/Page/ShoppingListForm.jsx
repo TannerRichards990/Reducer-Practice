@@ -1,16 +1,18 @@
 export default function ShoppingListForm({
   body,
   onBodyChanged,
-  onSubmit, 
+  onSubmit,
 }) {
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      onSubmit(body);
-    }}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit(body);
+      }}
+    >
       <textarea
         value={body}
-        onChange={(e) =>  {
+        onChange={(e) => {
           onBodyChanged(e.target.value);
         }}
       />
@@ -18,5 +20,3 @@ export default function ShoppingListForm({
     </form>
   );
 }
-      
-

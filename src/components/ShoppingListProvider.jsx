@@ -13,7 +13,10 @@ export const Context = createContext({
 });
 
 export const PostListProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducerLogger(reducer), initialState());
+  const [state, dispatch] = useReducer(
+    reducerLogger(reducer),
+    initialState()
+  );
 
   const contextObj = { state, dispatch };
 
