@@ -35,7 +35,7 @@ This is a retake on an old shopping list application. We need a means of:
 ## Rubric
 
 | Task                                                      | Points |
-|-----------------------------------------------------------|--------|
+| --------------------------------------------------------- | ------ |
 | Use the `useReducer` hook to manage shopping list state   | 2      |
 | Use the `useContext` hook to provide global state         | 2      |
 | Use a `switch` statement inside of your reducer           | 2      |
@@ -47,6 +47,9 @@ This is a retake on an old shopping list application. We need a means of:
 | Unit Testing[^1]                                          | 2      |
 | Deployed on netlify with CI passing                       | 2      |
 
-[^1]: Unit testing will include a unit test of reducers for adding to shopping
-list, deleting from shopping list, editing a shopping list item, and retrieving
-a shopping list of items
+[^1]:
+    Unit testing will include a unit test of reducers for adding to shopping
+    list, deleting from shopping list, editing a shopping list item, and retrieving
+    a shopping list of items
+
+Completed the new rubric for Reducers, check ReadMe for details.

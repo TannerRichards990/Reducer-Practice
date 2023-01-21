@@ -23,21 +23,21 @@ export async function getShoppingListItem(shoppingListItemId) {
   return checkError(response);
 }
 
-export async function createShoppingListItem(fields) {
+export async function createShoppingListItem(item) {
   const response = await client
     .from('anon-shopping-list-items')
     .insert({
-      ...fields,
+      item,
     })
   ;
   return checkError(response);
 }
 
-export async function updateShoppingItem(shoppingItemId, fields) {
+export async function updateShoppingItem(shoppingItemId, items) {
   const response = await client
     .from('anon-shopping-list-items')
     .update({
-      ...fields,
+      ...items,
     })
     .eq('id', shoppingItemId)
   ;
